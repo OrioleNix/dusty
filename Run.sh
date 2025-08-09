@@ -1,12 +1,16 @@
 #!/bin/bash
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y labwc waybar swaybg xfce4-appfinder foot firefox-esr network-manager blueman vlc orchis-gtk-theme faba-icon-theme mako-notifier swayidle greetd cage desktop-base
-cd /configs
-cp greetd.toml /etc/greetd/config.toml
-cp greetdenv /etc/greetd/environments
-cp -r OB-Orchis-OD/ /usr/share/themes/
+sudo apt install -y labwc swaybg xfce4-appfinder thunar foot firefox-esr network-manager blueman vlc orchis-gtk-theme faba-icon-theme mako-notifier swayidle swaylock greetd gtkgreet wlogout cage desktop-base sway fish gnome-software lxpolkit
+sudo useradd -M -G video greeter
+sudo chmod -R go+r /etc/greetd
+cd configs
+sudo cp greetd.toml /etc/greetd/config.toml
+sudo cp greetdenv /etc/greetd/environments
+sudo cp sway /etc/greetd/sway-config
+sudo cp -r OB-Orchis-OD/ /usr/share/themes/OB-Orchis-OD
+mkdir ~/.config/
 mkdir ~/.config/labwc/
 cp labmenu ~/.config/labwc/menu.xml
-mkdir ~/.config/waybar
-cp waybar ~/.config/waybar/config.jsonc
+cp autostart ~/.config/labwc/autostart
+systemctl reboot
