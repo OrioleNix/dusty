@@ -10,10 +10,10 @@ swaybg -i /usr/share/desktop-base/active-theme/wallpaper/contents/images/1920x10
 #     output HDMI-A-1 position 1366,0
 #     output eDP-1 position 0,0
 #   }
-kanshi >/dev/null 2>&1 &
+# kanshi >/dev/null 2>&1 &
 
 # Launch a panel such as yambar or waybar.
-# waybar >/dev/null 2>&1 &
+waybar >/dev/null 2>&1 &
 
 # To delay the launch of a particular client it is suggested that the following
 # syntax is used: ( sleep X ; foo ) &

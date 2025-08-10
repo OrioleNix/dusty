@@ -1,10 +1,19 @@
 {
     "layer": "top",
-    "modules-left": ["wlr/taskbar/", "sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
+    "modules-left": ["wlr/taskbar/"],
+    "modules-center": ["network"],
     "modules-right": ["battery", "clock"],
     "sway/window": {
         "max-length": 50
+    },
+    "network": {
+		// "interface": "wlp2*", // (Optional) To force the use of this interface
+		"format-wifi": "",
+		"format-ethernet": "",
+		"tooltip-format": "{essid} ({signalStrength}%)",
+		"format-linked": "{ifname} (No IP) ",
+		"format-disconnected": "⚠",
+		"format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "battery": {
         "format": "{capacity}% {icon}",
@@ -12,10 +21,13 @@
     },
     "clock": {
         "format-alt": "{:%a, %d. %b  %H:%M}"
-    }
+    },
     "wlr/taskbar": {
-        "format": "{app_id}",
-        "on-click": "minimize-raise",
+        "format": "{icon}",
+        "icon-size": 16,
+        "icon-theme": "Faba",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
     },
 }
-
