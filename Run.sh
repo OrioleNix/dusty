@@ -4,4 +4,4 @@ sudo apt upgrade -y
 sudo apt install git
 git clone https://github.com/OrioleNix/dusty.git
 cd dusty
-bash config.sh
+config.sh
