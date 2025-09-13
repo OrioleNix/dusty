@@ -18,5 +18,6 @@ cp waybar ~/.config/waybar/config
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 gsettings set org.gnome.desktop.interface gtk-theme Orchis
 gsettings set org.gnome.desktop.interface icon-theme Faba
+gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 systemctl disable getty@tty1
 systemctl reboot
